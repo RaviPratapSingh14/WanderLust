@@ -1,0 +1,55 @@
+<% layout('layout/boilerplate') %>
+<div class="row mt-3">
+<div class="col-8 offset-2">
+    <h3>Create a New Listing</h3>
+</br></br>    <form method="POST" action="/listings" novalidate class="needs-validation" 
+enctype="multipart/form-data">
+
+        <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input name="listing[title]" placeholder="Add a Catchy Title" type="text" class ="form-control" 
+        required />
+        <div class="valid-feedback">Title looks good!</div>
+         <div class="invalid-feedback">Please enter Title</div>
+        </div>
+        
+        <div class="mb-3">
+        <label for="description" class="form-label">Discription</label>
+        <textarea name="listing[description]" placeholder="enter description" type="text" class="form-control" required></textarea>
+         <div class="invalid-feedback">Please write a short Discription</div>
+    </div>
+        
+        <div class="mb-3">
+        <label for="image" class="form-label">Upload Listing Image</label>
+        <input name="listing[image]"  type="file" class="form-control" />
+        required
+        </div>
+
+        <div class="row">
+        <div class="mb-3 col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input name="listing[price]" placeholder="enter price" type="number" class="form-control" required/>
+         <div class="invalid-feedback">Please enter valid Price!</div>
+        </div>
+        
+       
+
+       <!-- Location (used for geocoding) -->
+<div class="mb-3 col-md-8">
+  <label for="location" class="form-label">Location</label>
+  <input name="listing[location]" placeholder="enter full address" type="text" class="form-control" required/>
+  <div class="invalid-feedback">Please enter a full address.</div>
+</div>
+
+<!-- Country -->
+<div class="mb-3">
+  <label for="country" class="form-label">Country</label>
+  <input name="listing[country]" placeholder="enter country" type="text" class="form-control" required/>
+  <div class="invalid-feedback">Please select the country name!</div>
+</div>
+
+
+        <button class="btn btn-dark add-btn mt-3">Add</button>
+    </form>
+    </div>
+ </div>

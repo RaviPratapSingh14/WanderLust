@@ -1,0 +1,246 @@
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+/* Navbar */
+/* Navbar */
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.fa-compass {
+  color: rgb(199, 67, 67);
+  font-size: 2rem;
+}
+
+.nav-link {
+  color: black !important;
+}
+
+.navbar .nav-link {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s ease;
+}
+
+.navbar .nav-link.active {
+  background-color: rgb(199, 67, 67);
+  color: white !important;
+  border-radius: 1.25rem;
+}
+
+.navbar .nav-link:hover {
+  background-color: #f5f5f5;
+  border-radius: 1.25rem;
+}
+
+
+/* Footer */
+/* Footer Container */
+.f-info {
+    background-color: #ebebeb;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+/* Shared styles for all 3 footer sections */
+.f-info-links,
+.f-info-social,
+.f-info-brand {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+/* Footer Links */
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+    font-size: 1rem;
+    transition: color 0.2s, text-decoration 0.2s;
+}
+
+.f-info-links a:hover {
+    color: rgb(199, 67, 67);
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.f-info-social i {
+    font-size: 1.4rem;
+    color: #222;
+    transition: color 0.3s;
+}
+
+.f-info-social i:hover {
+    color: rgb(199, 67, 67);
+}
+
+/* Branding */
+.f-info-brand {
+    font-weight: 600;
+    color: rgb(199, 67, 67);
+    font-size: 1.1rem;
+}
+
+.f-info-brand i {
+    margin-right: 0.5rem;
+}
+/* Responsive Styles */ 
+
+/* Cards */
+
+.listing-card{
+    border: none!important;
+    margin: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+
+}
+.card-body{
+    padding: 0rem !important;}
+.card-text{
+    font-weight: 400 !important;
+}
+.listing-link{
+    text-decoration:none ;
+}
+/* Card effects */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+   
+}
+/* New Page */
+.add-btn{
+    background-color: rgb(199, 67, 67) !important;
+    border: none !important;
+}
+/* Edit Page */
+
+.edit-btn{
+    background-color: rgb(168, 41, 41) !important;
+    border: none !important;
+}
+/* Show image */
+.show-img {
+    height: 40vh; /* was 30vh */
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.show-card {
+    padding: 0;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Review Form Card */
+.card.shadow-sm {
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Form Inputs */
+form textarea,
+form input[type="range"] {
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    transition: all 0.2s ease;
+}
+
+form textarea:focus,
+form input[type="range"]:focus {
+    outline: none;
+    border-color: rgb(199, 67, 67);
+    box-shadow: 0 0 0 2px rgba(199, 67, 67, 0.2);
+}
+
+/* Submit Button */
+form .btn-danger {
+    background-color: rgb(199, 67, 67);
+    border: none;
+    font-weight: 500;
+}
+
+form .btn-danger:hover {
+    background-color: #a83232;
+}
+
+/* Review Cards */
+.card-body .card-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.card-body .card-text {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Rating Text */
+.card-body small.text-muted {
+    color: #888;
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    .show-img {
+        height: 30vh;
+    }
+
+    .btns {
+        flex-direction: column;
+    }
+
+    .edit-btn,
+    form button {
+        width: 100%;
+    }
+}
+
+
+/* MAP */
+
+
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+

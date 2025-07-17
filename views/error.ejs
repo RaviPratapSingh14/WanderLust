@@ -1,0 +1,12 @@
+ <% layout('layout/boilerplate') %>
+
+<div class="row">
+  <div class="alert alert-danger col-6 offset-3" role="alert">
+    <h1>Error: <%= error.status || 500 %></h1>
+    <p><%= error.message || 'An unexpected error occurred.' %></p>
+
+    <% if (error.stack) { %>
+      <pre><%= error.stack %></pre>
+    <% } %>
+  </div>
+</div> 
