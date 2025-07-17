@@ -1,5 +1,5 @@
-const Listing=require("../Models/listing");
-const Review=require("../Models/review");
+const Listing=require("../models/listing");
+const Review=require("../models/review");
 
 module.exports.createReview=async (req, res) => {
     let listing = await Listing.findById(req.params.id);

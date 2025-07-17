@@ -14,7 +14,7 @@ const MongoStore = require('connect-mongo');
 const flash=require("connect-flash");
 const passport=require("passport");
 const LocalStrategy=require("passport-local");
-const User=require("./Models/user.js");
+const User=require("./models/user.js");
 
 const listingsRouter = require('./routes/listings.js');
 const reviewsRouter = require('./routes/review.js');
