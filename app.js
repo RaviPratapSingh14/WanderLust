@@ -100,9 +100,9 @@ app.use((req,res,next)=>{
 //  pbkdf2 hashing algorithm applied
 
 
-app.get("/", (req, res) => {
-  res.redirect("/listings");
-   });
+// app.get("/", (req, res) => {
+//   res.redirect("/listings");
+//    });
 
  app.use("/listings", listingsRouter);
  app.use("/listings/:id/reviews", reviewsRouter);
