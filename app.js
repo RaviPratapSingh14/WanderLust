@@ -100,14 +100,14 @@ app.use((req,res,next)=>{
 //  pbkdf2 hashing algorithm applied
 
 
-// app.get("/", (req, res) => {
-//   res.redirect("/listings");
-//    });
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+   });
 
  app.use("/listings", listingsRouter);
- app.use("/listings/:id/reviews", reviewsRouter);
-  
 
+
+ app.use("/listings/:id/reviews", reviewsRouter);
 
  app.use("/",userRouter);
 
@@ -129,6 +129,19 @@ app.use((req,res,next)=>{
 
 
 
-app.listen(3000, () => {
-  console.log("server is listening to port 3000");
+app.all("*", (req, res, next) => {
+  next(new ExpressError("Page Not Found", 404));
+});
+
+app.use((err, req, res, next) => {
+  const { status = 500 } = err;
+  if (!err.message) err.message = "Something went wrong!";
+  res.status(status).render("error.ejs", { err });
+});
+
+
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
